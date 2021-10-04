@@ -18,23 +18,6 @@ function request($url, $data = null, $headers = null)
     return curl_exec($ch);
 }
 
-function kirim_telegram($message)
-{
-    $token = "1473238136:AAHzAXwr1dQnMFrkcrty-pCvK53YmhM_vUo"; // Isi secret tokennya
-    $chatIds = "685065835"; // Isi id telegramnya
-    $url = "https://api.telegram.org/bot" . $token . "/sendMessage?chat_id=" . $chatIds;
-    $url = $url . "&text=" . urlencode($message);
-    $ch = curl_init();
-    $optArray = array(
-            CURLOPT_URL => $url,
-            CURLOPT_RETURNTRANSFER => true
-    );
-    curl_setopt_array($ch, $optArray);
-    $result = curl_exec($ch);
-    curl_close($ch);
-    return $result;
-}
-
 function getstr($str, $exp1, $exp2)
 {
     $a = explode($exp1, $str)[1];
