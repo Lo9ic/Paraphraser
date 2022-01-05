@@ -3,4 +3,4 @@ Tool that can restatement or rewording of a paragraph  or text,  in order to bor
 
 # How To Use
 
-Just php paraphraser.php and input the text
+Just php paraphraser.php and input the text.
